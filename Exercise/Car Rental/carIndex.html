@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMCE Car Rental</title>
+</head>
+<body>
+    <main>
+        <h1>
+            AMCE Car Rental
+        </h1>
+
+        <div>
+            <!-- The <form> tag is used to create an HTML form for user input 
+                most of the tags for user input have semantic name and are straight forward.
+                you'll know when to use a html tag or not-->            
+            <form action="#">
+
+                <!-- 
+                    difference between the label tags and the paragraph tags are the number of attributes in the tag and where they are used. 
+                    usually the <p> tag can be used for any general text but the <label> tag is usually used to simply label some user input.
+                    The for attribute is for the value of the element ID. the Form attribute is to specify which form the label belongs to.
+                    In the example below the value of the for attribute in the label tag is "PickupDate" -->
+                <label for="PickupDate">Pickup Date: </label>
+
+                <!--
+                    the input tag is a field where the user can enter data. this is the most imoprtant form element
+                    they are so important because they can take in user input in many different ways and allows the more creativetly for the programmer
+                    We can define what type of user input we want on the document by using the type attribute inside the input tag    
+                    heres a link to the many different ways to display input in html:
+                    o https://www.w3schools.com/tags/att_input_type.asp 
+                -->
+                <input type="text" id="PickupDate" name="PickupDate">
+
+                <br>
+                <br>
+                
+                <label for="lblnumOfDays">Number of Days: </label>
+                <input type="text" id="txtNumOfDays" name="txtNumOfDays">
+
+                <p>
+                    Options
+                </p>
+
+                <input type="checkbox" id="TollTag" name="TollTag" value="TollTag">
+                <label for="lblTollTag"> Electronic Toll Tag ($3.95/day)</label>
+                <br>
+                <input type="checkbox" id="GPS" name="GPs" value="GPS">
+                <label for="lblGPS"> GPS (2.95/day)</label>
+                <br>
+                <input type="checkbox" id="RoadsideAssistance" name="RoadsideAssistance" value="RoadsideAssistance">
+                <label for="lblRoadsideAssistance"> Roadside Assistance (2.95/day)</label>
+
+                <br>
+
+                <p>
+                    Under 25
+                </p>
+
+                <input type="radio" id="radioNo">
+                <label for="no">No</label>
+
+                <input type="radio" id="radioYes">
+                <label for="yes">Yes</label>
+
+                <br>
+                <br>
+
+                <button type="button" onclick="EstimateTotalCost()">Estimate Total Cost</button>
+                
+                <br>
+                <br>
+
+                <label for="lblCarRental">Car Rental</label>
+                <input type="text" name="txtCarRental" id="" placeholder="Choose">
+
+                <br>
+                <label for="lblOptions">Options</label>
+                <input type="text" name="txtOptions" id="txtOptions" placeholder="Choose">
+
+                <br>
+                <label for="lblUnderAge">Under 25 surchrage</label>
+                <input type="text" name="txtUnderAge" id="txtUnderAge" placeholder="+30%">
+
+                <p id="txtTotalDue"></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="./JS/CarScripts.js"></script>
+</body>
+</html>

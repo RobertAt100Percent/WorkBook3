@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--this intput type will let the user choose a date from the calender-->
+        <input type="date" name="userDate" id="UserDate">
+
+        <!--this is a basic button--> 
+        <button id="btnDate" onclick="handleClick()"> display date</button>
+        <p id="messagePara">
+        </p>
+        <p id="messagePara2">
+        </p>
+
+        <script>
+
+            function handleClick(){
+                //debug to console
+                console.log("it works");
+
+                //declare and initilazie all variables needed
+                const UserDate = document.getElementById("UserDate");
+                const message = document.getElementById("messagePara");
+                const message2 = document.getElementById("messagePara2");
+
+                //assing the date to a variable
+                let date = new Date(UserDate.value);
+                //debug to conosle
+                console.log(date);
+
+                //display to the user
+                message.innerText ='\nthis is the date formatted by the computer -> ' + date; 
+                message2.innerText = '\nthis is the date formatted in normal writing using the .toDateString() function -> ' + date.toDateString(); 
+
+            }
+        </script>
+</body>
+</html>
